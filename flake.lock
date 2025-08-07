@@ -57,36 +57,25 @@
     "mksession": {
       "inputs": {
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1754527476,
-        "narHash": "sha256-3sopdia85rEGMjvP1Tn/1hp9LE78DkefocWK0AxN9BY=",
-        "path": "/home/hippoid/fun/mksession",
-        "type": "path"
+        "lastModified": 1754518565,
+        "narHash": "sha256-hhhDoVCKaa5iMsIoqz7DjZrt0/NjPQ3Gp01OteprOUU=",
+        "owner": "idrisr",
+        "repo": "mksession",
+        "rev": "2c2a7ef6d62c51d44486e3203ab6b5980a8a5059",
+        "type": "github"
       },
       "original": {
-        "path": "/home/hippoid/fun/mksession",
-        "type": "path"
+        "owner": "idrisr",
+        "repo": "mksession",
+        "type": "github"
       }
     },
     "nixpkgs": {
-      "locked": {
-        "lastModified": 1753749649,
-        "narHash": "sha256-+jkEZxs7bfOKfBIk430K+tK9IvXlwzqQQnppC2ZKFj4=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "1f08a4df998e21f4e8be8fb6fbf61d11a1a5076a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-25.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
       "locked": {
         "lastModified": 1731603435,
         "narHash": "sha256-CqCX4JG7UiHvkrBTpYC3wcEurvbtTADLbo3Ns2CEoL8=",
@@ -102,43 +91,32 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1754292888,
-        "narHash": "sha256-1ziydHSiDuSnaiPzCQh1mRFBsM2d2yRX9I+5OPGEmIE=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "ce01daebf8489ba97bd1609d185ea276efdeb121",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-25.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "pdftc": {
       "inputs": {
         "flake-utils": "flake-utils_3",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1754526055,
-        "narHash": "sha256-a3GxCJVZ+OJLmgK5LoErMTrvcohcN4+4NSW8uKAuZCc=",
-        "path": "/home/hippoid/fun/pdftc",
-        "type": "path"
+        "lastModified": 1754526035,
+        "narHash": "sha256-Tim49jwPluEQCY9QCEh4rZZORdEsy6NJjG0wPhhkt2k=",
+        "owner": "idrisr",
+        "repo": "pdftc",
+        "rev": "418bdd0df48725c52eb40f52812b1e8090ef26cb",
+        "type": "github"
       },
       "original": {
-        "path": "/home/hippoid/fun/pdftc",
-        "type": "path"
+        "owner": "idrisr",
+        "repo": "pdftc",
+        "type": "github"
       }
     },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
         "mksession": "mksession",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "pdftc": "pdftc"
       }
     },
