@@ -4,14 +4,14 @@ A flake-native package set for Haskell, Bash, and beyond.
 
 This flake exposes a clean overlay of personal tools — including compiled Haskell packages, Bash scripts, CLI tools, and dev utilities — structured for reuse across multiple Nix-based projects.
 
-## 🔧 Features
+## Features
 
 - **Multi-language**: packages in Haskell, Bash, and other toolchains
 - **Composable overlay**: use via `inputs.idris-pkgs.overlays.default`
 - **Reusable**: consumed by system, home-manager, and project-level flakes
 - **Reproducible**: fully locked, with `nix flake check` and per-system support
 
-## 🚀 Usage
+## Usage
 
 In your `flake.nix`:
 
