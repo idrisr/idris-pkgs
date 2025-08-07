@@ -8,7 +8,13 @@
   };
   inputs.pdftc = {
     # url = "github:idrisr/pdftc";
-    url = "/home/hippoid//fun/pdftc";
+    url = "/home/hippoid/fun/pdftc";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+  inputs.pipe-rename = {
+    # url = "github:idrisr/pdftc";
+    url = "/home/hippoid/fun/pipe-rename";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -23,6 +29,7 @@
             [
               inputs.mksession.overlays.default
               inputs.pdftc.overlays.default
+              inputs.pipe-rename.overlays.default
             ];
         in
         merged;
