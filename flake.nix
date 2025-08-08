@@ -12,12 +12,6 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  inputs.pipe-rename = {
-    # url = "github:idrisr/pdftc";
-    url = "/home/hippoid/fun/pipe-rename";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
-
   outputs = inputs@{ nixpkgs, flake-utils, ... }:
     {
 
@@ -29,7 +23,6 @@
             [
               inputs.mksession.overlays.default
               inputs.pdftc.overlays.default
-              inputs.pipe-rename.overlays.default
             ];
         in
         merged;
