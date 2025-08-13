@@ -2,13 +2,11 @@
   inputs.nixpkgs.url = "github:nixos/nixpkgs/24.11";
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.mksession = {
-    # url = "github:idrisr/mksession";
-    url = "/home/hippoid/fun/mksession";
+    url = "github:idrisr/mksession";
     inputs.nixpkgs.follows = "nixpkgs";
   };
   inputs.pdftc = {
-    # url = "github:idrisr/pdftc";
-    url = "/home/hippoid/fun/pdftc";
+    url = "github:idrisr/pdftc";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
