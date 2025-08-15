@@ -62,14 +62,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1755012114,
-        "narHash": "sha256-EUffMhQvk2Fl1hLDbni8v3IWsi3vQojhSrXdB8mnVJQ=",
-        "path": "/home/hippoid/fun/mksession",
-        "type": "path"
+        "lastModified": 1755012081,
+        "narHash": "sha256-jm2aJAkrtZ9VjPpn7P5kOVk+svLTL13EP+eMNJA0/Xw=",
+        "owner": "idrisr",
+        "repo": "mksession",
+        "rev": "dae3973aaf5c03bb002086ffcb43cf4046e799c6",
+        "type": "github"
       },
       "original": {
-        "path": "/home/hippoid/fun/mksession",
-        "type": "path"
+        "owner": "idrisr",
+        "repo": "mksession",
+        "type": "github"
       }
     },
     "nixpkgs": {
@@ -96,14 +99,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1754584950,
-        "narHash": "sha256-6tkJgS4nzOi+WcIhGY3p/JEDV0shGx8hUH9WQzHKM+s=",
-        "path": "/home/hippoid/fun/pdftc",
-        "type": "path"
+        "lastModified": 1754526035,
+        "narHash": "sha256-Tim49jwPluEQCY9QCEh4rZZORdEsy6NJjG0wPhhkt2k=",
+        "owner": "idrisr",
+        "repo": "pdftc",
+        "rev": "418bdd0df48725c52eb40f52812b1e8090ef26cb",
+        "type": "github"
       },
       "original": {
-        "path": "/home/hippoid/fun/pdftc",
-        "type": "path"
+        "owner": "idrisr",
+        "repo": "pdftc",
+        "type": "github"
       }
     },
     "root": {
