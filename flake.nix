@@ -1,18 +1,23 @@
 {
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/24.11";
-  inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/25.05";
+
   inputs.mksession = {
     url = "github:idrisr/mksession";
     inputs.nixpkgs.follows = "nixpkgs";
   };
+
+  inputs.sorta = {
+    url = "github:idrisr/sorta";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   inputs.pdftc = {
     url = "github:idrisr/pdftc";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, flake-utils, ... }:
+  outputs = inputs@{ nixpkgs, ... }:
     {
-
       overlays.default = final: prev:
         let
           merged = builtins.foldl'
@@ -21,6 +26,7 @@
             [
               inputs.mksession.overlays.default
               inputs.pdftc.overlays.default
+              inputs.sorta.overlays.default
             ];
         in
         merged;
