@@ -16,6 +16,12 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
+  inputs.videoChapter = {
+    url = "github:idrisr/videoChapter";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+
   outputs = inputs@{ nixpkgs, ... }:
     {
       overlays.default = final: prev:
@@ -27,6 +33,7 @@
               inputs.mksession.overlays.default
               inputs.pdftc.overlays.default
               inputs.sorta.overlays.default
+              inputs.videoChapter.overlays.default
             ];
         in
         merged;
