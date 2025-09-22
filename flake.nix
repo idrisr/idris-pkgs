@@ -21,6 +21,11 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
+  inputs.presentationVideoManager = {
+    url = "github:idrisr/presentation-video-manager";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
 
   outputs = inputs@{ nixpkgs, ... }:
     {
@@ -34,6 +39,7 @@
               inputs.pdftc.overlays.default
               inputs.sorta.overlays.default
               inputs.videoChapter.overlays.default
+              inputs.presentationVideoManager.overlays.default
             ];
         in
         merged;
