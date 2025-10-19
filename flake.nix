@@ -26,6 +26,12 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
+  inputs.newcover = {
+    url = "github:idrisr/newcover";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+
 
   outputs = inputs@{ nixpkgs, ... }:
     {
@@ -39,6 +45,7 @@
               inputs.pdftc.overlays.default
               inputs.sorta.overlays.default
               inputs.videoChapter.overlays.default
+              inputs.newcover.overlays.default
               inputs.presentationVideoManager.overlays.default
             ];
         in
