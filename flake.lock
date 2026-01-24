@@ -338,11 +338,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769216476,
-        "narHash": "sha256-T9VYX7cmu2Ltzf+6ddk/9UiYh9avS6BoiDnzQcdHmNw=",
+        "lastModified": 1769216704,
+        "narHash": "sha256-52fppEGpzcs5NVRHLjlIuN5YR0WqvE3vp/7FkgxCg+U=",
         "owner": "idrisr",
         "repo": "videoChapter",
-        "rev": "68d52686e53e11ff079f7c01ab672b41be741858",
+        "rev": "f27af6e7e79f6e760c4a45877ef6280a48551f62",
         "type": "github"
       },
       "original": {
