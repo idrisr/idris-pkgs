@@ -174,11 +174,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1770598401,
-        "narHash": "sha256-6slL2SV5o5WT6quOLUmoDt+ozMYKBcECYKhRMoVzm/s=",
+        "lastModified": 1770599477,
+        "narHash": "sha256-wbSvcD5YqHl13hIKKV7Iv0YzS/gRXmzXLqDAUJSXUDw=",
         "owner": "idrisr",
         "repo": "pdftc",
-        "rev": "62062f8e7d4459b6cbe2371cbde9af8c0ebc3dbf",
+        "rev": "ccec9a2b696a87d176c3bab7c696511af3131dcd",
         "type": "github"
       },
       "original": {
