@@ -32,6 +32,11 @@
       url = "github:idrisr/newcover";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zettel = {
+      url = "github:idrisr/zettel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -51,6 +56,7 @@
             inputs.videoChapter.overlays.default
             inputs.newcover.overlays.default
             inputs.presentationVideoManager.overlays.default
+            inputs.zettel.overlays.default
           ];
         in
         merged;
@@ -67,6 +73,7 @@
         };
         packageNames = [
           "mksession"
+          "zettel"
           "pdftc"
           "sorta"
           "videoChapter"
