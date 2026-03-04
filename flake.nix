@@ -3,6 +3,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/25.11";
     flake-utils.url = "github:numtide/flake-utils";
 
+    rofi = {
+      url = "github:idrisr/rofi-picker/haskell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     mksession = {
       url = "github:idrisr/mksession";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -63,6 +68,7 @@
             inputs.presentationVideoManager.overlays.default
             inputs.zettel.overlays.default
             inputs.hyprvoice.overlays.default
+            inputs.rofi.overlays.default
           ];
         in
         merged;
@@ -87,6 +93,12 @@
           "sorta"
           "videoChapter"
           "zettel"
+          "books"
+          "papers"
+          "techtalk"
+          "booksDesktopItem"
+          "papersDesktopItem"
+          "techtalkDesktopItem"
         ];
         packages = pkgs.lib.attrsets.filterAttrs (name: _: builtins.elem name packageNames) pkgs;
         defaultPackage = pkgs.symlinkJoin {
