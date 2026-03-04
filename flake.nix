@@ -8,6 +8,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprvoice = {
+      url = "github:idrisr/hyprvoice";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     sorta = {
       url = "github:idrisr/sorta";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -57,12 +62,14 @@
             inputs.newcover.overlays.default
             inputs.presentationVideoManager.overlays.default
             inputs.zettel.overlays.default
+            inputs.hyprvoice.overlays.default
           ];
         in
         merged;
     in
     {
       overlays.default = overlay;
+      homeManagerModules.hyprvoice = inputs.hyprvoice.homeManagerModules.default;
     }
     // flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-linux" ] (
       system:
@@ -72,13 +79,14 @@
           overlays = [ overlay ];
         };
         packageNames = [
+          "hyprvoice"
           "mksession"
-          "zettel"
+          "newcover"
           "pdftc"
+          "presentationVideoManager"
           "sorta"
           "videoChapter"
-          "newcover"
-          "presentationVideoManager"
+          "zettel"
         ];
         packages = pkgs.lib.attrsets.filterAttrs (name: _: builtins.elem name packageNames) pkgs;
         defaultPackage = pkgs.symlinkJoin {
