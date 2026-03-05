@@ -8,6 +8,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    urlq = {
+      url = "git+file:/home/hippoid/fun/video-downloader";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     mksession = {
       url = "github:idrisr/mksession";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -69,13 +74,17 @@
             inputs.zettel.overlays.default
             inputs.hyprvoice.overlays.default
             inputs.rofi.overlays.default
+            inputs.urlq.overlays.default
           ];
         in
         merged;
     in
     {
       overlays.default = overlay;
-      homeManagerModules.hyprvoice = inputs.hyprvoice.homeManagerModules.default;
+      homeManagerModules = {
+        hyprvoice = inputs.hyprvoice.homeManagerModules.default;
+        urlq = inputs.urlq.homeManagerModules.default;
+      };
     }
     // flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-linux" ] (
       system:
@@ -99,6 +108,8 @@
           "booksDesktopItem"
           "papersDesktopItem"
           "techtalkDesktopItem"
+          "urlq-server"
+          "transcribe-parallel"
         ];
         packages = pkgs.lib.attrsets.filterAttrs (name: _: builtins.elem name packageNames) pkgs;
         defaultPackage = pkgs.symlinkJoin {

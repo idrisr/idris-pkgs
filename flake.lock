@@ -202,6 +202,27 @@
         "type": "github"
       }
     },
+    "home-manager_2": {
+      "inputs": {
+        "nixpkgs": [
+          "urlq",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1772633327,
+        "narHash": "sha256-jl+DJB2DUx7EbWLRng+6HNWW/1/VQOnf0NsQB4PlA7I=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "5a75730e6f21ee624cbf86f4915c6e7489c74acc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
     "hyprvoice": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -357,6 +378,7 @@
         "presentationVideoManager": "presentationVideoManager",
         "rofi": "rofi",
         "sorta": "sorta",
+        "urlq": "urlq",
         "videoChapter": "videoChapter",
         "zettel": "zettel"
       }
@@ -530,6 +552,27 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
+      }
+    },
+    "urlq": {
+      "inputs": {
+        "home-manager": "home-manager_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1772670505,
+        "narHash": "sha256-RaaRJlR2GTJKm05i61XyIdAXdzgqoks51qPiq/mYZYs=",
+        "ref": "refs/heads/main",
+        "rev": "425b43d555079522ff314ff1aa5d1e4d183e413a",
+        "revCount": 19,
+        "type": "git",
+        "url": "file:/home/hippoid/fun/video-downloader"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:/home/hippoid/fun/video-downloader"
       }
     },
     "videoChapter": {
