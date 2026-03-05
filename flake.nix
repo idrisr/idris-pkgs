@@ -93,8 +93,8 @@
           inherit system;
           overlays = [ overlay ];
         };
+        lib = pkgs.lib;
         packageNames = [
-          "hyprvoice"
           "mksession"
           "newcover"
           "pdftc"
@@ -102,15 +102,18 @@
           "sorta"
           "videoChapter"
           "zettel"
-          "books"
-          "papers"
-          "techtalk"
-          "booksDesktopItem"
-          "papersDesktopItem"
-          "techtalkDesktopItem"
-          "urlq-server"
-          "transcribe-parallel"
-        ];
+        ] ++ lib.optional (lib.elem system lib.platforms.linux)
+          [
+            "books"
+            "booksDesktopItem"
+            "hyprvoice"
+            "papers"
+            "papersDesktopItem"
+            "techtalk"
+            "techtalkDesktopItem"
+            "transcribe-parallel"
+            "urlq-server"
+          ];
         packages = pkgs.lib.attrsets.filterAttrs (name: _: builtins.elem name packageNames) pkgs;
         defaultPackage = pkgs.symlinkJoin {
           name = "idris-pkgs";
