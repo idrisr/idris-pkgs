@@ -564,15 +564,15 @@
       "locked": {
         "lastModified": 1772670505,
         "narHash": "sha256-RaaRJlR2GTJKm05i61XyIdAXdzgqoks51qPiq/mYZYs=",
-        "ref": "refs/heads/main",
+        "owner": "idrisr",
+        "repo": "video-downloader",
         "rev": "425b43d555079522ff314ff1aa5d1e4d183e413a",
-        "revCount": 19,
-        "type": "git",
-        "url": "file:/home/hippoid/fun/video-downloader"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/hippoid/fun/video-downloader"
+        "owner": "idrisr",
+        "repo": "video-downloader",
+        "type": "github"
       }
     },
     "videoChapter": {

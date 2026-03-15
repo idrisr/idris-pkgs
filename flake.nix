@@ -9,7 +9,7 @@
     };
 
     urlq = {
-      url = "git+file:/home/hippoid/fun/video-downloader";
+      url = "github:idrisr/video-downloader";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
